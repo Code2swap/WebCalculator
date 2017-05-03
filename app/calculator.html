@@ -1,0 +1,68 @@
+<form class="form-horizontal" style='padding:20px;' (window:keydown)="doSomething($event)">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="background-color:rgb(100, 100, 120);">
+            <div class="form-group row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="font-size: 40px;font-weight: bold;">{{output}}</div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="form-group row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(7)">7</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(8)">8</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(9)">9</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="devide()">/</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(4)">4</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(5)">5</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(6)">6</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="multiply()">*</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(1)">1</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(2)">2</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(3)">3</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="subtract()">-</button>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="clear()">C</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="updateOutput(0)">0</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="calculate()">=</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="calculatorBtn" (click)="add()">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
