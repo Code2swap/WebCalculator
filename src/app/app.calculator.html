@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+
+</head>
+<body>
+
+	<form class="form-horizontal" style='padding: 100px;' (window:keydown)="doSomething($event)">
+		<div class="panel-primary">
+			<div class="panel-heading" style="padding: 5px; background-color: #DEDDE6;">
+				<div class="cal-row" style="word-wrap: break-word; font-size: 60px;
+				font-weight: bold;">{{output}}</div>
+			</div>
+
+			<div class="panel-body"  style='padding-left: 300px;'>
+				<div class="cal-row">
+					<button class="calculatorBtn" (click)="updateOutput(7)">7</button>
+					<button class="calculatorBtn" (click)="updateOutput(8)">8</button>
+					<button class="calculatorBtn" (click)="updateOutput(9)">9</button>
+					<button class="calculatorBtn" (click)="devide()">/</button>
+				</div>
+				<div class="cal-row">
+					<button class="calculatorBtn" (click)="updateOutput(4)">4</button>
+					<button class="calculatorBtn" (click)="updateOutput(5)">5</button>
+					<button class="calculatorBtn" (click)="updateOutput(6)">6</button>
+					<button class="calculatorBtn" (click)="multiply()">*</button>
+				</div>
+				<div class="cal-row">
+					<button class="calculatorBtn" (click)="updateOutput(1)">1</button>
+					<button class="calculatorBtn" (click)="updateOutput(2)">2</button>
+					<button class="calculatorBtn" (click)="updateOutput(3)">3</button>
+					<button class="calculatorBtn" (click)="subtract()">-</button>
+				</div>
+				<div class="cal-row">
+					<button class="calculatorBtn" (click)="clear()">C</button>
+					<button class="calculatorBtn" (click)="updateOutput(0)">0</button>
+					<button class="calculatorBtn" (click)="calculate()">=</button>
+					<button class="calculatorBtn" (click)="add()">+</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
+

@@ -2,11 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/calculator.html'
+    templateUrl: './app.calculator.html',
+    styleUrls: ['./app.style.css']
 })
 export class AppComponent {
+    
     output: string = "0";
-    doSomething($event) {
+    result: string = "0";
+
+    doSomething($event: any) {
         debugger;
         switch ($event.key) {
             case "0":
@@ -33,49 +37,67 @@ export class AppComponent {
             case "C":
                 this.clear();
                 break;
+            case "Backspace":
+                if(this.output == "") this.output = "0";
+                else    this.output = this.output.slice(0, -1);
+                this.result = this.output;
+                break;
             default:
                 break;
         }
     }
 
     updateOutput(btn: number) {
+        this.output = this.result;
         if (this.output == "0") {
             this.output = String(btn);
         }
         else {
             this.output += btn;
         }
+        this.result = this.output;
         return false;
     }
 
     devide() {
-        this.output += "/";
+        this.output = this.result;
+        this.output += " / ";
+        this.result = this.output;
         return false;
     }
 
     add() {
-        this.output += "+";
+        this.output = this.result;
+        this.output += " + ";
+        this.result = this.output;
         return false;
     }
 
     subtract() {
-        this.output += "-";
+        this.output = this.result;
+        this.output += " - ";
+        this.result = this.output;
         return false;
     }
 
     multiply() {
-        this.output += "*";
+        this.output = this.result;
+        this.output += " * ";
+        this.result = this.output;
         return false;
     }
     
 
     clear() {
         this.output = "0";
+        this.result = "0";
         return false;
     }
 
     calculate() {
-        this.output = String(eval(this.output));
+        this.output = this.result;
+        this.result = String(eval(this.output));
+        this.output = this.output + " = " + this.result;
         return false;
     }
 }
