@@ -1,0 +1,16 @@
+.calculatorBtn{
+    height:80px;
+    width:80px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: #38ADDF;
+}
+
+.calculatorBtn:hover{
+    font-size: 40px;
+}
+
+.cal-row {
+	padding-top: 5px;
+}
